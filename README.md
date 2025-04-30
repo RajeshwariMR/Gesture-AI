@@ -1,10 +1,12 @@
 # Gesture AI – Speech to Sign Language Converter
 
-🎯 **Empowering communication for the deaf community using AI and animated gestures.**
+🎯 Empowering communication for the deaf community using AI and animated gestures.
 
----
 
-## 🌟 What is Gesture AI?
+
+
+
+## 🌟 About Gesture AI
 
 **Gesture AI** is an AI-powered tool that:
 
@@ -14,14 +16,18 @@
 - 🔤 Spells out words letter-by-letter if no sign exists  
 - ✏️ Allows users to **review and edit** the transcribed text before playback  
 
----
+
+
+
 
 ## 🎥 Demo Video
 
 Watch the demo of the **Gesture AI** website in action:  
 📽️ [Project Demo Video on Google Drive](https://drive.google.com/file/d/1EZV3Vn5-lqS7SihfFC5NVT2tdz5jgcgl/view?usp=sharing)
 
----
+
+
+
 
 ## 🔧 How to Run Locally
 
@@ -44,7 +50,9 @@ Watch the demo of the **Gesture AI** website in action:
 4. Open your browser and navigate to:  
    👉 `http://localhost:5000`
 
----
+
+
+
 
 ## 📂 Project Structure
 
@@ -60,7 +68,9 @@ Gesture-AI/
 ├── templates/index.html      → Web interface template
 ```
 
----
+
+
+
 
 ## 🤝 How Gesture AI Benefits Users
 
@@ -69,22 +79,23 @@ Gesture-AI/
 🧏‍♀️ Enhances communication access for the Deaf and Hard-of-Hearing community  
 🌐 Available for free, web-based, and user-friendly for everyone  
 
----
+
+
+
 
 ## 🚀 Features
 
-✅ Converts real-time speech to text using Whisper AI  
-✅ Smooth and responsive website UI  
-✅ Flexible JSON-based gesture mapping  
-✅ Simple and customizable codebase (Flask + HTML/CSS/JS)  
-✅ Works offline after setup  
+🎙️ Converts real-time speech to text using Whisper AI  
+👋 Dynamic gesture playback powered by Blender animations
+🗂️ Flexible JSON-based gesture mapping  
+🖥️ Simple and customizable codebase (Flask + HTML/CSS/JS)  
+🔌 Works offline after setup  
 
----
+
+
+
 
 ## 📬 Contact
 
 📧 **rajeshwarimr004@gmail.com**  
 🌐 GitHub: [RajeshwariMR](https://github.com/RajeshwariMR)
-```
-
-
