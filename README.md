@@ -2,7 +2,7 @@
 🎯*Empowering communication for the deaf community using AI and animated gestures.*
 
 
-## 🌟 About Gesture AI
+## About Gesture AI
 
 **Gesture AI** is an AI-powered tool that:
 
@@ -12,12 +12,12 @@
 🔤 Spells out words letter-by-letter if no sign exists  
 ✏️ Allows users to **review and edit** the transcribed text before playback  
 
-## 🎥 Demo Video
+## Demo Video
 
 Watch the demo of the **Gesture AI** website in action:  
 📽️ [Project Demo Video](https://drive.google.com/file/d/1EZV3Vn5-lqS7SihfFC5NVT2tdz5jgcgl/view?usp=sharing)
 
-## 🔧 How to Run Locally
+## How to Run Locally
 
 
 1. **Clone the repository**
@@ -53,14 +53,14 @@ Gesture-AI/
 ├── templates/index.html      → Web interface template
 ```
 
-## 🤝 How Gesture AI Benefits Users
+## How Gesture AI Benefits Users
 
 💡 Transforms speech into animated sign language promptly  
 🎓 Offers an interactive way to learn basic sign language gestures  
 🧏‍♀️ Enhances communication access for the Deaf and Hard-of-Hearing community  
 🌐 Available for free, web-based, and user-friendly for everyone  
 
-## 🚀 Features
+## Features
 
 🎙️ Converts real-time speech to text using Whisper AI  
 👋 Dynamic gesture playback powered by Blender animations       
@@ -68,6 +68,6 @@ Gesture-AI/
 🗂️ Flexible JSON-based gesture mapping            
 🔌 Works offline after setup  
 
-## 📬 Contact
+## Contact
 
 🌐 GitHub: [RajeshwariMR](https://github.com/RajeshwariMR)
