@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesture AI - Speak to Sign Instantly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600&family=Rajdhani:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Outfit:wght@400;600&family=Space+Grotesk:wght@400;600&family=VT323&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700&family=Roboto+Slab:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+    header {
+      display: none;
+    }
+    .container, section {
+      padding: 2rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section {
+      margin: 0;
+    }
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+      padding-top: 2rem;
+      margin-bottom: 0;
+    }
+    .hero .text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #f4a261;
+    }
+    .hero h2 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    .typewriter {
+      font-size: 1.2em;
+      margin-top: 15px;
+      color: #f7fffa;
+      border-right: 2px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(60, end) forwards, blink 0.7s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    /* INTRO SECTION */
+    .intro-section {
+    margin: 60px auto;
+    padding: 2rem 0;
+    }
+    
+    .intro-box {
+      background: linear-gradient(135deg, #2a2a50, #1a1a2e);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 0 25px rgba(255, 138, 84, 0.3);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .intro-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    
+    .intro-text h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #ff8a54;
+    }
+    
+    .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #f0f0f0;
+    background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 10px rgba(255, 138, 84, 0.15);
+    transition: all 0.3s ease-in-out;
+    }
+  
+    /* Optional subtle bolding of key phrases using <strong> in the HTML */
+    .intro-text p strong {
+      color: #f4a261;
+      font-weight: 600;
+    }
+
+
+    .intro-image {
+    flex: 0 0 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .intro-image img {
+    width: 270px;
+    height: 270px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 4px solid #f4a261;
+    box-shadow: 0 0 25px rgba(255, 138, 84, 0.6);
+
+    /* 🎯 Crisp color rendering */
+    image-rendering: -moz-crisp-edges;    /* Firefox */
+    image-rendering: -o-crisp-edges;      /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Safari */
+    image-rendering: crisp-edges;
+    filter: none;
+    }
+
+    /* Glowing Box for "How Gesture AI Is Useful" */
+    #useful-box {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 30px rgba(244, 162, 97, 0.4);
+      border: 2px solid #f4a261;
+      text-align: center;
+    }
+
+    #useful-box h2 {
+      font-size: 1.8rem;
+      color: #f4a261;
+      margin-bottom: 1rem;
+    }
+
+    .useful-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 2rem auto 0 auto;
+    max-width: 700px;
+    text-align: center;
+    }
+  
+    .useful-list li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+    }
+
+    /* Glowing Box for "How It Works" */
+    #how-it-works .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .glowing-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      border: none;
+      padding: 1.2rem 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 200px;
+      max-width: 300px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .glowing-box:hover {
+      transform: translateY(-5px) scale(1.04);
+      box-shadow: 0 0 25px rgba(244, 162, 97, 0.7);
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+
+    #how-it-works h2 {
+      font-size: 1.8rem;
+      color: #f4a261;
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #d4a373;
+      color: white;
+    }
+    /* Add space between How It Works and Try It Now sections */
+    #how-it-works {
+      margin-bottom: 3rem; /* Adjust the space below "How It Works" section */
+    }
+  
+    #outputText {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      min-height: 1.5rem;
+    }
+    
+
+    .cta h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    #video-section h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 4rem;
+      margin-left:30px;
+    }
+
+    #video-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+    #gestureVideo, #nextVideo {
+      width: 100%;
+      height: 500px;
+      background: black;
+      margin:auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="text">
+      <h1>Gesture AI</h1>
+      <h2>Speech to Sign Language Converter</h2>
+      <p class="typewriter" style="margin-bottom: 0.5; padding-bottom: 0.5;">🎯 Empowering communication for the deaf community using AI and animated gestures.</p>
+    </div>
+  </section>
+  
+  <!-- INTRO SECTION -->
+  <section class="intro-section" style="margin-top: 0; padding-top: 0;" data-aos="fade-up">
+  <div class="intro-box">
+    <div class="intro-text">
+      <h2>Hello! Welcome to Gesture AI</h2>
+      <p>
+      <strong>Gesture AI</strong> is a <strong>Speech-to-Sign Language Converter</strong> using <strong>animated avatars</strong>. It captures spoken words, transcribes them with AI, and displays matching sign language gestures <strong>created using Blender</strong>. If a word doesn’t have a sign, it shows the letters one by one. <strong>Users can review and edit</strong> the text before final output.
+      </p>
+  </div>
+  <div class="intro-image">
+      <img src="{{ url_for('static', filename='Hello.gif') }}" alt="Intro Animation GIF" style="border-radius: 12px; max-width: 400px; height: auto; border: 4px solid #f4a261;">
+  </div>
+  </div>
+  </section>
+
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step glowing-box">
+        <span class="emoji">🎤</span>
+        Captures speech or typed input
+      </div>
+      <div class="step glowing-box">
+        <span class="emoji">🧠</span>
+        Converts speech to text using OpenAI Whisper
+      </div>
+      <div class="step glowing-box">
+        <span class="emoji">🎬</span>
+        On Submit, plays matching sign gestures using JSON mapping
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Input Section & Output Section -->
+  <section class="container">
+    <div class="cta">
+      <h2>🎤 Try it Now!</h2>
+      <p>Enter your speech or text below to see it come alive in sign language.</p>
+    </div>
+    <div class="input-section">
+      <input type="text" id="textInput" placeholder="Enter text here">
+      <button onclick="processText()">Submit</button>
+      <button onclick="startSpeechRecognition()">🎤</button>
+    </div>
+    <p id="outputText"></p>
+    <div id="video-section">
+      <h2>Sign Language Output</h2>
+      <div id="video-container">
+        <video id="gestureVideo" autoplay></video>
+        <video id="nextVideo" style="position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Gesture AI is Useful Section -->
+  <section id="useful-box">
+    <h2>How Gesture AI Is Useful</h2>
+    <ul class="useful-list">
+      <li>💡 Converts speech to animated sign language instantly</li>
+      <li>🎓 Learn basic sign gestures in an engaging way</li>
+      <li>🧏‍♀️ Makes communication more accessible for the deaf community</li>
+      <li>🌐 Free, browser-based, and easy to use</li>
+    </ul>
+  </section>
+
+
+
+  <script>
+    const oneLiner = "🎯 Empowering communication for the deaf community using AI and animated gestures.";
+    let charIndex = 0;
+    const typewriterTarget = document.getElementById("typewriter-text");
+  
+    function typeEffect() {
+      if (charIndex < oneLiner.length) {
+        typewriterTarget.textContent += oneLiner.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 40);
+      }
+    }
+  
+    window.onload = typeEffect;
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Gesture AI | <a href="mailto:rajeshwarimr004@gmail.com">Email</a></p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
