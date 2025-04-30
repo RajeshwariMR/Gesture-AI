@@ -10,11 +10,11 @@
 
 **Gesture AI** is an AI-powered tool that:
 
-- 🎤 Captures spoken words via microphone  
-- 🧠 Converts speech to text using AI  
-- ✋ Matches the words to animated **sign language gestures** created in Blender  
-- 🔤 Spells out words letter-by-letter if no sign exists  
-- ✏️ Allows users to **review and edit** the transcribed text before playback  
+🎤 Captures spoken words via microphone  
+🧠 Converts speech to text using AI  
+✋ Matches the words to animated **sign language gestures** created in Blender  
+🔤 Spells out words letter-by-letter if no sign exists  
+✏️ Allows users to **review and edit** the transcribed text before playback  
 
 
 
@@ -86,9 +86,9 @@ Gesture-AI/
 ## 🚀 Features
 
 🎙️ Converts real-time speech to text using Whisper AI  
-👋 Dynamic gesture playback powered by Blender animations
-🗂️ Flexible JSON-based gesture mapping  
-🖥️ Simple and customizable codebase (Flask + HTML/CSS/JS)  
+👋 Dynamic gesture playback powered by Blender animations       
+🖥️ Simple and customizable codebase (Flask + HTML/CSS/JS)          
+🗂️ Flexible JSON-based gesture mapping            
 🔌 Works offline after setup  
 
 
